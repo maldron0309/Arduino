@@ -7,20 +7,21 @@ void setup() {
 }
 
 void loop() {
-  // red 10 sc 
+  // Red for 10s
   digitalWrite(red, HIGH);
   delay(10000);
 
-  // yellow red 5sc
+  // Yellow with Red for 5s
   digitalWrite(yellow, HIGH);
   delay(5000);
 
-  // yellow off green on 10sc
+  // Green for 10s Red,Yellow off
+  digitalWrite(red, LOW);
   digitalWrite(yellow, LOW);
   digitalWrite(green, HIGH);
   delay(10000);
 
-  // green 0.5sc 10
+  // Green blinks 10times 0.5s
   for (int i = 0; i < 10; i++) {
     digitalWrite(green, HIGH);
     delay(500);
@@ -28,7 +29,7 @@ void loop() {
     delay(500);
   }
 
-  // green off 
+  // Red for 10s Green off
   digitalWrite(green, LOW);
   digitalWrite(red, HIGH);
   delay(10000);
