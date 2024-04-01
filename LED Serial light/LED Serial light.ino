@@ -27,7 +27,7 @@ void controlLED(char input) {
     case 'F': ledPin = GREEN_LED; break;
     default: return;
   }
-  setLEDState(ledPin, input % 2 == 0 ? LOW : HIGH);
+  SetLEDState(ledPin, input % 2 == 0 ? LOW : HIGH);
 }
 
 void SetLEDState(int pin, int state) {
